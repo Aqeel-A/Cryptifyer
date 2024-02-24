@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dycription</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color:  rgb(1, 19, 17);">
+    <div class="ebody">
+        <nav class="nav">
+            <div class="boxx">
+                <button id="menu-toggle">&#9776</button>
+                <ul>
+                    <li><button class="encrypt-btn"><a href="encryption.html">Encryption</a></button></li>
+                    <li><button class="decrypt-btn"><a href="dycription.html"> Decryption</a></button></li>
+                    <li><button class="auto-crypt-btn"><a href="auto.html"> Auto Crypt</a></button></li>
+                    <li><button class="search-btn"><a href="Search.html"> Search</a></button></li>
+                    <li><button class="modify-btn"><a href="modify.html"> Modify</a></button></li>
+                    <li><button class="delete-btn"><a href="delete.html"> Delete</a></a></button></li>
+                </ul>
+            </div>
+        </nav>
+
+    <div class="container2">
+        <div class="card">
+            <div class="input">
+            <h3>Decryption</h3>
+            <input type="text" name="" id="decryption" placeholder="enter your text">
+        </div>
+        <div class="input2">
+            <h3>key</h3>
+            <input type="text" name="" id="key" placeholder="enter your key">
+            <button type="button" onclick="decryptedData()">Decrypt</button>
+        </div>
+        <div>
+            <p id="heading"></p></div>
+           <div> <p id="result"></p></div>
+    </div>
+
+    <script>
+
+document.getElementById('menu-toggle').addEventListener('click', function() {
+    var menu = document.querySelector('.nav ul');
+    if (menu.style.display === 'none') {
+        menu.style.display = 'block';
+    } else {
+        menu.style.display = 'none';
+    }
+});
+
+
+        function decryptedData() {
+                   var data = document.getElementById("decryption").value;
+                   var key = document.getElementById("key").value;
+                   var decryptedData = "";
+       
+                   for (var i = 0; i < data.length; i++) {
+                       decryptedData += String.fromCharCode(data.charCodeAt(i) - parseInt(key));
+                   }
+                   document.getElementById("heading").innerHTML="Decrypted Data :";
+                   document.getElementById("result").innerHTML = decryptedData;
+               };
+           </script>
+
+</body>
+</html>

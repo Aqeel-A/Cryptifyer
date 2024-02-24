@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color:  rgb(1, 19, 17);">
+    <div class="ebody">
+        <nav class="nav">
+            <div class="boxx">
+                <button id="menu-toggle">&#9776</button>
+                <ul>
+                    <li><button class="encrypt-btn"><a href="encryption.html">Encryption</a></button></li>
+                    <li><button class="decrypt-btn"><a href="dycription.html"> Decryption</a></button></li>
+                    <li><button class="auto-crypt-btn"><a href="auto.html"> Auto Crypt</a></button></li>
+                    <li><button class="search-btn"><a href="Search.html"> Search</a></button></li>
+                    <li><button class="modify-btn"><a href="modify.html"> Modify</a></button></li>
+                    <li><button class="delete-btn"><a href="delete.html"> Delete</a></a></button></li>
+                </ul>
+            </div>
+        </nav>
+
+    <div class="container2">
+        <div class="card">
+
+            <div class="input">
+                <h3>Mention File Name</h3>
+                <input type="text" id="fname"  name="" placeholder="Mention a name">
+            </div>
+
+
+            <div class="input">
+            <h3>Encryption</h3>
+            <input type="text" name="" id="encryption" placeholder="enter your text">
+        </div>
+        <div class="input2">
+            
+            <h3>Your key will be autocrypt</h3>
+            <button type="button" onclick="encryptedData()">Encrypt</button>
+        </div>
+       <div>
+        <p id="heading"></p></div>
+       <div> <p id="result"></p></div>
+    </div>
+
+
+    <script>
+
+ function encryptedData() {
+    var filename = document.getElementById("fname").value;
+            var data = document.getElementById("encryption").value;
+            var key = 21;
+            var encryptedData = "";
+
+            for (var i = 0; i < data.length; i++) {
+                encryptedData += String.fromCharCode(data.charCodeAt(i) + parseInt(key));
+            }
+            document.getElementById("heading").innerHTML="Encrypted Data :";
+            document.getElementById("result").innerHTML = encryptedData;
+
+
+             var users = JSON.parse(localStorage.getItem("users")) || [];
+
+    
+    var user = users.find(u => u.filename === filename);
+    if (user) {
+        alert("File name already exists. Choose a different one.");
+    } else {
+       
+        users.push({ filename: filename, data: encryptedData });
+       
+        localStorage.setItem("users", JSON.stringify(users));
+        alert("Data saved");
+        };
+        };
+    </script>
+</body>
+</html>

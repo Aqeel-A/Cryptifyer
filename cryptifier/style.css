@@ -1,0 +1,245 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+  a {
+    color: rgb(240, 233, 233);
+    opacity: 0.9;
+  
+    text-decoration: none;
+
+  }
+  p{
+    color:azure;
+  }
+  .box {
+    text-decoration: none;
+    text-align: center;
+    margin-top: 40px;
+    margin-right: 40px;
+  }
+ 
+  .container {
+    
+    text-align: center;
+  }
+
+  
+  .container2 {
+    text-align: center;
+    background-color:  rgba(32,33,33, 0.829);
+    border-radius: 10px;
+    box-shadow: 0 0 15px white;
+    width:400px;
+    height: 610px;
+    text-align: center;
+  }
+  #contain {
+    text-align: center;
+    background-color: rgba(32,33,33, 0.829);
+    border-radius: 10px;
+    box-shadow: 0 0 15px white;
+    width:400px;
+    height: 500px;
+
+  }
+  .card{
+    margin-top: 60px;
+  }
+
+  form {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  input {
+
+    width: 250px;
+    padding: 8px;
+    margin-bottom: 12px;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #656665;
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+    text-underline-offset: none;
+    width: 50%;
+    margin-bottom: 1.2%;
+    cursor: pointer;
+    border:none;
+    font-size: medium;
+  }
+  
+  button:hover {
+    background-color: #b5bbb5a4;
+  }
+  #heading {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(250, 248, 248);
+}
+#heading1 {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(248, 239, 239);
+}
+#result {
+    font-size: 16px;
+    color: rgb(241, 237, 237);
+}
+#ekey{
+  font-weight: bold;
+  font-size:X-large;
+}
+h3{
+
+  color:azure;
+}
+
+.ebody{
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  
+
+}
+.sidenav {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: -250px;
+  background-color: #333;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 15px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main-content {
+  margin-left: 250px;
+  transition: margin-left 0.5s;
+}
+
+.toggle-btn {
+  font-size: 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.toggle-btn:hover {
+  background-color: #555;
+}
+
+
+
+li {
+    margin: 0 10px;
+}
+  #menu-toggle {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 50px;
+   
+    cursor: pointer;
+    z-index: 2;
+    font-size: 20px;
+  }
+.menu {
+  color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   width: 100vw;
+}
+
+.main_menu {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px white;
+}
+ .nav {
+    background-color:  rgb(1, 19, 17);;
+    width: 120px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: space-between;
+  }
+  .boxx {
+    display: flex;
+    align-items: center;
+  }
+  #menu-list.active {
+    animation: slide-in 0.3s ease-in-out;
+  }
+
+  #menu-list:not(.active) {
+    animation: slide-out 0.3s ease-in-out forwards;
+  }
+ .boxx ul {
+    list-style-type: none;
+    padding: 0;
+   
+  }
+  
+  .boxx li {
+    margin-right: 10px;
+  }
+  
+  .boxx button {
+    width: 100px;
+    background-color: #39393b;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .boxx button:hover {
+    background-color: #4e4e52ce;
+  }
+  .boxx a{
+    text-decoration: none;
+    color: white;
+  }
